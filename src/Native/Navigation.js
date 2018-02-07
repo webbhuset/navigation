@@ -28,7 +28,7 @@ function replaceState(url)
 {
 	return _elm_lang$core$Native_Scheduler.nativeBinding(function(callback)
 	{
-		history.replaceState({}, '', url);
+		history.replaceState(Object.assign({}, history.state), '', url);
 		callback(_elm_lang$core$Native_Scheduler.succeed(getLocation()));
 	});
 }
@@ -69,6 +69,14 @@ function setLocation(url)
 function getLocation()
 {
 	var location = document.location;
+    var hState   = "";
+
+    try {
+        if (history.state) {
+            hState = JSON.stringify(history.state);
+        }
+    } catch (e) {
+    }
 
 	return {
 		href: location.href,
@@ -81,7 +89,8 @@ function getLocation()
 		search: location.search,
 		hash: location.hash,
 		username: location.username,
-		password: location.password
+        password: location.password,
+        historyState: hState 
 	};
 }
 

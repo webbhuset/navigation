@@ -220,18 +220,20 @@ in your `update` function.
 as described [here](https://developer.mozilla.org/en-US/docs/Web/API/Location).
 -}
 type alias Location =
-  { href : String
-  , host : String
-  , hostname : String
-  , protocol : String
-  , origin : String
-  , port_ : String
-  , pathname : String
-  , search : String
-  , hash : String
-  , username : String
-  , password : String
-  }
+    { href : String
+    , host : String
+    , hostname : String
+    , protocol : String
+    , origin : String
+    , port_ : String
+    , pathname : String
+    , search : String
+    , hash : String
+    , username : String
+    , password : String
+    , historyState : String
+    }
+
 
 
 -- EFFECT MANAGER
