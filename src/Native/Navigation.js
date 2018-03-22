@@ -1,4 +1,4 @@
-var _elm_lang$navigation$Native_Navigation = function() {
+var _webbhuset$navigation$Native_Navigation = function() {
 
 
 // FAKE NAVIGATION

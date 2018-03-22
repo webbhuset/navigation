@@ -1,7 +1,7 @@
 {
     "version": "2.1.0",
     "summary": "Manage browser navigation yourself (a.k.a. SPA routing, browser history)",
-    "repository": "http://github.com/elm-lang/navigation.git",
+    "repository": "http://github.com/webbhuset/navigation.git",
     "license": "BSD3",
     "source-directories": [
         "src"
